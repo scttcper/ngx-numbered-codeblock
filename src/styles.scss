@@ -1,30 +1,53 @@
-@import "./prism-funky-theme.css";
+@import '~bootstrap/scss/functions';
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
+  Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
+  segoe ui symbol;
+$body-bg: #fff;
+$body-color: #111;
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/type';
+// @import "~bootstrap/scss/images";
+// @import "~bootstrap/scss/code";
+@import '~bootstrap/scss/grid';
+// @import "~bootstrap/scss/tables";
+// @import "~bootstrap/scss/forms";
+// @import "~bootstrap/scss/buttons";
+// @import "~bootstrap/scss/transitions";
+// @import "~bootstrap/scss/dropdown";
+// @import "~bootstrap/scss/button-group";
+// @import "~bootstrap/scss/input-group";
+// @import "~bootstrap/scss/custom-forms";
+// @import "~bootstrap/scss/nav";
+// @import "~bootstrap/scss/navbar";
+// @import "~bootstrap/scss/card";
+// @import "~bootstrap/scss/breadcrumb";
+// @import "~bootstrap/scss/pagination";
+// @import "~bootstrap/scss/badge";
+// @import "~bootstrap/scss/jumbotron";
+// @import "~bootstrap/scss/alert";
+// @import "~bootstrap/scss/progress";
+// @import "~bootstrap/scss/media";
+// @import "~bootstrap/scss/list-group";
+// @import "~bootstrap/scss/close";
+// @import "~bootstrap/scss/modal";
+// @import "~bootstrap/scss/tooltip";
+// @import "~bootstrap/scss/popover";
+// @import "~bootstrap/scss/carousel";
+// @import "~bootstrap/scss/utilities";
+@import '~bootstrap/scss/print';
 
-code {
-  font-family: 'Menlo', monospace;
-  font-weight: bold;
-  padding: 0.2rem 0.3rem;
-  background-color: #ffffff;
-  line-height: 1.8em;
-  font-size: 0.8em;
+@include media-breakpoint-down(xs) {
+  h1 {
+    font-size: 1.5rem;
+  }
 }
 
-pre > code {
-  background-color: transparent;
-  font-weight: 300;
-}
-
-pre {
-  overflow: initial;
-  background-color: #ffffff;
-  display: inline-block;
-  padding: 0.5em;
-  min-width: 33vw;
-  border-radius: 3px;
-}
+@import './prism-funky-theme.css';
 
 @media (max-width: 600px) {
-  .content,
   pre {
     min-width: 90vw;
     max-width: 90vw;
@@ -34,64 +57,16 @@ pre {
 
 .codeblock code {
   display: block;
-  padding: 0 0 0 1.5rem;
-  border-radius: 0;
+  padding: 0 0 1em 2.5em;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.4em;
   background: white;
   color: #495057;
 }
-.codeblock.line-numbers {
-  padding-left: 0;
-}
-@media (max-width: 600px) {
+
+@media (max-width: 575.98px) {
   .codeblock code {
     font-size: 10px;
-    padding: 0;
-    pointer-events: none;
   }
-}
-
-pre.line-numbers {
-  position: relative;
-  padding-left: 3em;
-  counter-reset: linenumber;
-}
-
-pre.line-numbers > code {
-  position: relative;
-}
-
-.line-numbers .line-numbers-rows {
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  font-size: 100%;
-  left: -0.8em;
-  width: 2em; /* works for line-numbers below 1000 lines */
-  user-select: none;
-}
-
-@media (max-width: 600px) {
-  .line-numbers .line-numbers-rows {
-    display: none;
-  }
-  .github-btn {
-    margin-right: 5px;
-  }
-}
-
-.line-numbers-rows > span {
-  pointer-events: none;
-  display: block;
-  counter-increment: linenumber;
-}
-
-.line-numbers-rows > span:before {
-  content: counter(linenumber);
-  color: #ced3d7;
-  display: block;
-  padding-right: 0.7em;
-  text-align: right;
 }

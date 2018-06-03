@@ -1,106 +1,43 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+/* tslint:disable:max-line-length */
+import { ChangeDetectionStrategy, Component, Input, OnChanges } from '@angular/core';
 
-import 'prismjs';
-import * as Prism from 'prismjs';
-import 'prismjs/components/prism-typescript.min';
-
-const code = `import React from 'react';
-import { Group } from '@vx/group';
-import { LinePath } from '@vx/shape';
-import { curveMonotoneX } from '@vx/curve';
-import { genDateValue } from '@vx/mock-data';
-import { scaleTime, scaleLinear } from '@vx/scale';
-import { extent, max } from 'd3-array';
-
-function genLines(num) {
-  return new Array(num).fill(1).map(() => {
-    return genDateValue(25);
-  })
-}
-
-const series = genLines(12);
-const data = series.reduce((rec, d) => {
-  return rec.concat(d)
-}, []);
-
-// accessors
-const x = d => d.date;
-const y = d => d.value;
-
-export default ({
-  width,
-  height,
-}) => {
-  // bounds
-  const xMax = width;
-  const yMax = height / 8;
-
-  // scales
-  const xScale = scaleTime({
-    range: [0, xMax],
-    domain: extent(data, x),
-  });
-  const yScale = scaleLinear({
-    range: [yMax, 0],
-    domain: [0, max(data, y)],
-  });
-
-  return (
-    <svg width={width} height={height}>
-      <rect
-        x={0}
-        y={0}
-        width={width}
-        height={height}
-        fill="#242424"
-        rx={14}
-      />
-      {xMax > 8 && series.map((d, i) => {
-        const offset = i * yMax / 2;
-        const curve = i % 2 == 0
-          ? curveMonotoneX
-          : undefined;
-        return (
-          <Group
-            key={\`lines-\${i}\`}
-            top={offset}
-          >
-            <LinePath
-              data={d}
-              xScale={xScale}
-              yScale={yScale}
-              x={x}
-              y={y}
-              stroke="#ffffff"
-              strokeWidth={1}
-              curve={curve}
-            />
-          </Group>
-        );
-      })}
-    </svg>
-  );
-}`;
+declare var require: any;
 
 @Component({
-  selector: 'app-codeblock',
+  selector: 'ngx-numbered-codeblock',
   template: `
-  <pre class="jsx-3645412256 codeblock line-numbers"><code><span aria-hidden="true" class="line-numbers-rows"><span *ngFor="let l of lines"></span></span><span [innerHTML]="html"></span></code></pre>
+  <pre class="codeblock" [class.line-numbers]="lineNumbers"><code><codeblock-linenumbers *ngIf="lineNumbers" [lines]="lines"></codeblock-linenumbers><span [innerHTML]="html"></span></code></pre>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  styles: [`
+  pre {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .codeblock.line-numbers {
+    padding-left: 0;
+  }
+  pre.line-numbers {
+    position: relative;
+    padding-left: 2.5em;
+    counter-reset: linenumber;
+  }
+  pre.line-numbers > code {
+    position: relative;
+  }
+  `]
 })
-export class CodeblockComponent implements OnInit {
+export class CodeblockComponent implements OnChanges {
+  @Input() lineNumbers = true;
+  @Input() code = '';
   html = '';
-  lines = [];
+  lines: number;
 
-  constructor() { }
-
-  ngOnInit() {
-    const match = code.match(/\n(?!$)/g);
-    const linesNum = match ? match.length + 1 : 1;
-    this.lines = new Array(linesNum + 1).fill(1);
-    console.log(this.lines)
-    this.html = Prism.highlight(code, Prism.languages.typescript);
+  ngOnChanges() {
+    const match = this.code.match(/\n(?!$)/g);
+    this.lines = match ? match.length + 1 : 1;
+    const { highlight, languages } = require('prismjs');
+    this.html = highlight(this.code, languages.typescript);
   }
 
 }

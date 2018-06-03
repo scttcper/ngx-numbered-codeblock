@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CodeblockComponent } from './codeblock/codeblock.component';
+import { CodeblockLineNumberComponent } from './codeblock/linenumbers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CodeblockComponent
+    CodeblockComponent,
+    CodeblockLineNumberComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
