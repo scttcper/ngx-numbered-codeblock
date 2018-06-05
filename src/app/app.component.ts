@@ -41,10 +41,19 @@ export class HeroSearchComponent implements OnInit {
   }
 }`;
 
+const smallcode = `export class Hero {
+  name: string = 'Hero';
+
+  hello() {
+    return \`Hello \${this.name}\`;
+  }
+}`;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
 export class AppComponent {
   code = code;
+  smallcode = smallcode;
 }

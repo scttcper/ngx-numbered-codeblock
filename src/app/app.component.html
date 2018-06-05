@@ -1,9 +1,18 @@
-<div class="container">
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">ngx-numbered-codeblock</h1>
+    <p class="lead"><a href="https://github.com/PrismJS/prism">Prism.js</a> wrapper with built-in line numbers</p>
+    <p class="lead"><a href="https://github.com/PrismJS/prism">GitHub</a></p>
+  </div>
+</div>
+<div class="container mb-5">
   <div class="row">
     <div class="col-12">
-      <h1>ngx-numbered-codeblock</h1>
-      <p>Prismjs wrapper with built-in line numbers</p>
+      <h5>Example</h5>
       <ngx-numbered-codeblock [code]="code"></ngx-numbered-codeblock>
+      <hr>
+      <h5>Example Without Line Numbers</h5>
+      <ngx-numbered-codeblock [code]="smallcode" [lineNumbers]="false"></ngx-numbered-codeblock>
     </div>
   </div>
 </div>

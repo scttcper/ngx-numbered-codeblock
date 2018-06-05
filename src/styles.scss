@@ -1,9 +1,7 @@
 @import '~bootstrap/scss/functions';
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
-  Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
-  segoe ui symbol;
 $body-bg: #fff;
-$body-color: #111;
+$body-color: #333;
+$enable-rounded: false;
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
 @import '~bootstrap/scss/root';
@@ -26,7 +24,7 @@ $body-color: #111;
 // @import "~bootstrap/scss/breadcrumb";
 // @import "~bootstrap/scss/pagination";
 // @import "~bootstrap/scss/badge";
-// @import "~bootstrap/scss/jumbotron";
+@import "~bootstrap/scss/jumbotron";
 // @import "~bootstrap/scss/alert";
 // @import "~bootstrap/scss/progress";
 // @import "~bootstrap/scss/media";
@@ -36,11 +34,11 @@ $body-color: #111;
 // @import "~bootstrap/scss/tooltip";
 // @import "~bootstrap/scss/popover";
 // @import "~bootstrap/scss/carousel";
-// @import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/utilities";
 @import '~bootstrap/scss/print';
 
-@include media-breakpoint-down(xs) {
-  h1 {
+@include media-breakpoint-down(md) {
+  .display-4 {
     font-size: 1.5rem;
   }
 }
@@ -56,13 +54,8 @@ $body-color: #111;
 }
 
 .codeblock code {
-  display: block;
-  padding: 0 0 1em 2.5em;
-  font-weight: 300;
   font-size: 14px;
   line-height: 1.4em;
-  background: white;
-  color: #495057;
 }
 
 @media (max-width: 575.98px) {
