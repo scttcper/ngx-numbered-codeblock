@@ -1,0 +1,32 @@
+{
+  "name": "@ctrl/ngx-numbered-codeblock",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@types/prismjs": "^1.9.0"
+  },
+  "peerDependencies": {
+    "@angular/core": "^5.2.0 || ^6.0.0"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public_api.ts"
+    },
+    "dest": "../../dist",
+    "whitelistedNonPeerDependencies": [
+      "@types/prismjs"
+    ]
+  },
+  "repository": "typectrl/ngx-numbered-codeblock",
+  "homepage": "https://github.com/typectrl/ngx-numbered-codeblock",
+  "bugs": "https://github.com/typectrl/ngx-numbered-codeblock/issues",
+  "license": "MIT",
+  "description": "numbered codeblock and prismjs wrapper for angular",
+  "keywords": [
+    "prismjs",
+    "codeblock",
+    "angular"
+  ]
+}
