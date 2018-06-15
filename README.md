@@ -31,13 +31,18 @@ import { NumberedCodeblockModule } from '@ctrl/ngx-numbered-codeblock';
 
 // Import your required language in main.ts or at the root of your application
 import 'prismjs';
+// typescript
 import 'prismjs/components/prism-typescript';
+// javascript
+import 'prismjs/components/prism-javascript';
 ```
 
 Use The Component
 ```html
 <ngx-numbered-codeblock [code]="code"></ngx-numbered-codeblock>
 ```
+
+Import a [theme](https://github.com/PrismJS/prism-themes) or create your own
 
 ## Inputs
 * `code` - a formatted string of the code to display
