@@ -4,9 +4,11 @@ import { CommonModule } from '@angular/common';
 import { CodeblockComponent } from './codeblock.component';
 import { CodeblockLineNumberComponent } from './linenumbers.component';
 
+const c = [CodeblockComponent, CodeblockLineNumberComponent];
+
 @NgModule({
   imports: [CommonModule],
-  declarations: [CodeblockComponent, CodeblockLineNumberComponent],
-  exports: [CodeblockComponent, CodeblockLineNumberComponent],
+  declarations: c,
+  exports: c,
 })
 export class NumberedCodeblockModule {}

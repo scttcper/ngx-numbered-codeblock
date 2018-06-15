@@ -1,6 +1,4 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/typectrl/ngx-numbered-codeblock/master/misc/preview.png" width="225" alt="ngx-numbered-codeblock preview">
-  <br>
   <h1>ngx-numbered-codeblock</h1>
   <br>
   <a href="https://www.npmjs.org/package/@ctrl/ngx-numbered-codeblock">
@@ -20,4 +18,36 @@ __DEMO__: https://typectrl.github.io/ngx-numbered-codeblock/
 
 ## Installation
 
-`npm install @ctrl/ngx-numbered-codeblock`
+```sh
+npm install @ctrl/ngx-numbered-codeblock
+```
+
+## Use
+Import the module
+
+```ts
+// Added to NgModule
+import { NumberedCodeblockModule } from '@ctrl/ngx-numbered-codeblock';
+
+// Import your required language in main.ts or at the root of your application
+import 'prismjs';
+import 'prismjs/components/prism-typescript';
+```
+
+Use The Component
+```html
+<ngx-numbered-codeblock [code]="code"></ngx-numbered-codeblock>
+```
+
+## Inputs
+* `code` - a formatted string of the code to display
+* `languague` - default: `typescript` the code parser to use with prismjs
+* `lineNumbers` - default: `true` if line numbers should be shown
+
+## License
+MIT
+
+---
+
+> GitHub [@scttcper](https://github.com/scttcper) &nbsp;&middot;&nbsp;
+> Twitter [@scttcper](https://twitter.com/scttcper)
