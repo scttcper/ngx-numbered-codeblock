@@ -1,4 +1,4 @@
-import { Component, NgModule, ViewChild } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { async, TestBed } from '@angular/core/testing';
 
 import { NumberedCodeblockModule } from './codeblock.module';
