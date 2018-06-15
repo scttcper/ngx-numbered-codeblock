@@ -13,6 +13,7 @@
   <br>
 </div>
 
+> [Prism.js](https://github.com/PrismJS/prism) wrapper with built-in line numbers
 
 __DEMO__: https://typectrl.github.io/ngx-numbered-codeblock/  
 
