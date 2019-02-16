@@ -11,13 +11,16 @@ declare var require: any;
 @Component({
   selector: 'ngx-numbered-codeblock',
   template: `
-  <pre class="codeblock" [class.line-numbers]="lineNumbers"><code><codeblock-linenumbers *ngIf="lineNumbers" [lines]="lines"></codeblock-linenumbers><span [innerHTML]="html"></span></code></pre>
+    <pre
+      class="codeblock"
+      [class.line-numbers]="lineNumbers"
+    ><code><codeblock-linenumbers *ngIf="lineNumbers" [lines]="lines"></codeblock-linenumbers><span [innerHTML]="html"></span></code></pre>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   styles: [
     `
       pre {
-        overflow-x: scroll;
+        overflow-x: auto;
         overflow-y: hidden;
         padding-left: 0;
       }
