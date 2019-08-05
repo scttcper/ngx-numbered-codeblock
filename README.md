@@ -15,7 +15,7 @@
 
 > [Prism.js](https://github.com/PrismJS/prism) wrapper with built-in line numbers
 
-__DEMO__: https://typectrl.github.io/ngx-numbered-codeblock/  
+__DEMO__: https://ngx-numbered-codeblock.netlify.com/  
 
 ## Installation
 
