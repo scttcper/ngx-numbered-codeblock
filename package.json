@@ -38,7 +38,7 @@
     "@angular/compiler-cli": "8.2.0",
     "@angular/language-service": "8.2.0",
     "@types/fs-extra": "8.0.0",
-    "@types/jasmine": "3.4.0",
+    "@types/jasmine": "3.4.1",
     "@types/node": "12.7.3",
     "@types/prismjs": "1.16.0",
     "codelyzer": "5.1.0",
