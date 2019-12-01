@@ -41,7 +41,7 @@
     "@types/jasmine": "3.5.0",
     "@types/node": "12.12.14",
     "@types/prismjs": "1.16.0",
-    "codelyzer": "5.1.2",
+    "codelyzer": "5.2.0",
     "fs-extra": "8.1.0",
     "jasmine-core": "3.4.0",
     "karma": "4.3.0",
