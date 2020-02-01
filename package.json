@@ -54,7 +54,7 @@
     "ts-node": "8.6.2",
     "tsickle": "0.38.0",
     "tslint": "6.0.0",
-    "typescript": "3.5.3"
+    "typescript": "3.7.5"
   },
   "repository": "typectrl/ngx-numbered-codeblock"
 }
