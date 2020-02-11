@@ -23,6 +23,15 @@ __DEMO__: https://ngx-numbered-codeblock.netlify.com/
 npm install @ctrl/ngx-numbered-codeblock
 ```
 
+## Dependencies
+
+Latest version available for each version of Angular
+
+| @ctrl/ngx-numbered-codeblock | Angular |
+| ---------------------------- | ------- |
+| 2.0.2                        | 8.x     |
+| current                      | >= 9.x  |
+
 ## Use
 Import the module
 
