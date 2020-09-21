@@ -4,10 +4,10 @@
   <a href="https://www.npmjs.org/package/@ctrl/ngx-numbered-codeblock">
     <img src="https://badge.fury.io/js/%40ctrl%2Fngx-numbered-codeblock.svg" alt="npm">
   </a> 
-  <a href="https://travis-ci.org/TypeCtrl/ngx-numbered-codeblock">
-    <img src="https://travis-ci.org/TypeCtrl/ngx-numbered-codeblock.svg?branch=master" alt="travis"></a> 
-  <a href="https://codecov.io/github/typectrl/ngx-numbered-codeblock">
-    <img src="https://img.shields.io/codecov/c/github/typectrl/ngx-numbered-codeblock.svg" alt="codecov">
+  <a href="https://travis-ci.org/scttcper/ngx-numbered-codeblock">
+    <img src="https://travis-ci.org/scttcper/ngx-numbered-codeblock.svg?branch=master" alt="travis"></a> 
+  <a href="https://codecov.io/github/scttcper/ngx-numbered-codeblock">
+    <img src="https://img.shields.io/codecov/c/github/scttcper/ngx-numbered-codeblock.svg" alt="codecov">
   </a>
   <br>
   <br>
@@ -30,7 +30,8 @@ Latest version available for each version of Angular
 | @ctrl/ngx-numbered-codeblock | Angular |
 | ---------------------------- | ------- |
 | 2.0.2                        | 8.x     |
-| current                      | >= 9.x  |
+| 3.0.1                        | 9.x     |
+| current                      | >= 10   |
 
 ## Use
 Import the module
