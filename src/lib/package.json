@@ -5,10 +5,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/prismjs": "^1.16.0"
+    "@types/prismjs": "^1.16.1"
   },
   "peerDependencies": {
-    "@angular/core": ">=9.0.0-0"
+    "@angular/core": ">=10.0.0-0"
   },
   "ngPackage": {
     "lib": {
@@ -19,9 +19,9 @@
       "@types/prismjs"
     ]
   },
-  "repository": "typectrl/ngx-numbered-codeblock",
-  "homepage": "https://github.com/typectrl/ngx-numbered-codeblock",
-  "bugs": "https://github.com/typectrl/ngx-numbered-codeblock/issues",
+  "repository": "scttcper/ngx-numbered-codeblock",
+  "homepage": "https://github.com/scttcper/ngx-numbered-codeblock",
+  "bugs": "https://github.com/scttcper/ngx-numbered-codeblock/issues",
   "license": "MIT",
   "description": "numbered codeblock and prismjs wrapper for angular",
   "keywords": [
